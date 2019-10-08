@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Configurador 3D</title>
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/angular-loading-bar/build/loading-bar.min.css" />
+	<link rel="stylesheet" href="styles/figura.css" />
+	<link rel="stylesheet" href="styles/carousel.css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body ng-app='materiales'>
+	<nav class="navbar navbar-default" ng-controller="navCtrl">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" ng-class="!navCollapsed && 'in'" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+					<span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" ng-click="elec1 = false; elec2 = false; elec3 = false; elec4 = false; elec5 = false"><img class="logo" src="styles/logo.jpg" alt="MIBALIA" /></a>
+			</div>
+
+			<div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed = true" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li ng-class="elec1 && 'active'" ng-click='activar("elec1")'>
+						<a href="#show-scene">Mostrar Ambiente</a>
+					</li>
+					<li ng-class="elec2 && 'active'" ng-click='activar("elec2")'>
+						<a href="#select-scene">Cambiar Ambiente</a>
+					</li>
+					<li ng-show="authOk()" ng-class="elec3 && 'active'" ng-click='activar("elec3")'>
+						<a href="#editpavs">Pavimentos </a>
+					</li>
+					<li ng-show="authOk()" ng-class="elec4 && 'active'" ng-click='activar("elec4")'>
+						<a href="#editrevs">Revestimientos</a>
+					</li>
+					<li ng-class="elec5 && 'active'" ng-click='activar("elec5")'>
+						<a href="#login">Administrador</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+		<div ng-view=""></div>
+	<script src="/libs/angular/angular.js"></script>
+	<script src="/libs/angular-animate/angular-animate.js"></script>
+	<script src="/libs/angular-touch/angular-touch.js"></script>
+    <script src="/libs/angular-route/angular-route.js"></script>
+    <script src="/libs/angular-resource/angular-resource.js"></script>
+    <script src="/libs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="/libs/angular-route/angular-route.js"></script>
+	<script src="/libs/angular-bootstrap/ui-bootstrap.js"></script>
+	<script src="/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="/libs/ngstorage/ngStorage.js"></script>
+	<script src="/libs/angular-loading-bar/build/loading-bar.min.js"></script>
+	<script src="/app.js"></script> 
+	<script src="/servicio-mio.js"></script> 
+	<script src="/servicio-mats.js"></script> 
+	<script src="/servicio-amb.js"></script> 
+	<script src="/servicio-login.js"></script> 
+	<script src="/servicio-explorador.js"></script> 
+	<script src="/component-login.js"></script> 
+	<script src="/component-nav.js"></script> 
+	<script src="/component-portada.js"></script> 
+	<script src="/component-carousel.js"></script> 
+	<script src="/component-modal.js"></script> 
+	<script src="/component-elegirmat.js"></script> 
+	<script src="/component-editmats.js"></script> 
+	<script src="/directiva-mytouchstart.js"></script> 
+	<script src="/directiva-mytouchend.js"></script> 
+	<script src="/directiva-c3d.js"></script> 
+	<script src="/directiva-c3dsvgbase.js"></script> 
+	<script src="/directiva-miintro.js"></script> 
+	<script src="/router.js"></script> 
+</body>
+</html>

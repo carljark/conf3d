@@ -1,0 +1,50 @@
+{
+  "name": "conf3d",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "body-parser": "~1.0.1",
+    "bootstrap": "^3.3.6",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "crypto": "~0.0.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jquery": "~2.1.4",
+    "logger": "0.0.1",
+    "morgan": "^1.7.0",
+    "mysql": "~2.5.0",
+    "name": "0.0.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^4.5.3",
+    "pg-hstore": "^2.3.2",
+    "sendevent": "^1.0.4",
+    "sequelize": "~2.0.0",
+    "serve-favicon": "^2.5.0",
+    "uglify-js": "^2.6.2",
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.2",
+    "watch": "^0.18.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express-server": "^0.5.3",
+    "grunt-serve": "^0.1.6",
+    "jit-grunt": "^0.10.0"
+  }
+}

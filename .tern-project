@@ -1,0 +1,16 @@
+{
+  "libs": [
+    "browser"
+  ],
+  "plugins": {
+    "requirejs": {
+      "baseURL": "./",
+      "paths": {}
+    },
+    "node": {},
+    "angular": {}
+  },
+  "ecmaVersion": "6",
+  "loadEagerly": [],
+  "dontLoad": []
+}

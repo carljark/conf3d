@@ -1,0 +1,29 @@
+<div id="formlogin" class="col-sm-offset-4 col-sm-4">
+	<form novalidate class="form" role="form" name="form1" method="post">
+		<div class="row">
+			<div class="form-group">
+				<label class="col-sm-12" for="username">Usuario</label>
+				<div class="col-sm-10">
+					<input type="text" name="username" placeholder="Escribe tu nombre de usuario" id="username" class="form-control" required data-ng-model="user.username">
+				</div> 
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<label class="separar" for="password">Contraseña</label>
+				</div> 
+				<div class="col-sm-10">
+					<input type="password" name="password" placeholder="Password" id="password" class="form-control" required data-ng-model="user.password">
+				</div> 
+				<div class="col-sm-2">
+					<span class="error" ng-show="(user.password.length < 8)">*</span>
+				</div>
+			</div>
+			<div class="col-sm-offset-4 col-sm-6 col-xs-offset-6 col-xs-6">
+				<div class="separar">
+					<button class="btn btn-block btn-default" type="submit" ng-disabled="form1.$invalid" ng-click="login(user)">Autentificar</button>
+				</div> 
+			</div>
+		</div>
+	</form>
+</div>

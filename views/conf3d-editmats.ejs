@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1">
+	<button type="button" class="btn btn-default" ng-click="cleanmat('<%- clase %>');">
+		<span class="glyphicon glyphicon-pencil"></span> Reiniciar <%- titulo %>
+	</button>
+	<button type="button" class="btn btn-default" ng-click="actumateriales('<%- clase %>');">
+		<span class="glyphicon glyphicon-pencil"></span> Actualizar <%- titulo %>
+	</button>
+	<button type="button" class="btn btn-default" ng-click="desborrar('<%- clase %>');">
+		<span class="glyphicon glyphicon-transfer"></span> Restaura <%- titulo %>
+	</button>
+	</div> 
+</div> 
+
+<div class="row">
+	<div id="revs" class="col-md-10 col-md-offset-1">
+		<div class="formrevs">
+			<h3><%- titulo %></h3>
+			<form novalidate>
+				<table class="table table-responsive table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>MODELO</th>
+							<th>SERIE</th>
+							<th>PREVIEW</th>
+							<th>¿Editar?</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="mat in <%- clase %> | orderBy:'modelo'">
+							<td><input class="form-control" type="text" ng-model="mat.modelo" ng-disabled="!mat.isDisabled" mi-intro='toggleEdit(mat);actumat("<%- clase %>",mat)' /></td>
+							<td><input class="form-control" type="text" ng-model="mat.serie" ng-disabled="!mat.isDisabled" mi-intro='toggleEdit(mat);actumat("<%- clase %>",mat)' /></td>
+							<td>
+								<img data-ng-src="<%- clase %>/{{mat.archivo}}" height="50" alt="" />
+
+							</td>
+							<td id="{{mat.id}}">
+								<button class="btn btn-info" type="button" ng-disabled="mat.isDisabled" ng-click="toggleEdit(mat)" >
+									<span class="glyphicon glyphicon-pencil"></span>
+								</button>
+								<button class="btn btn-default" type="button" ng-disabled="!mat.isDisabled" ng-click="toggleEdit(mat);actumat('<%- clase %>',mat)" >
+									<span class="glyphicon glyphicon-floppy-save"></span>
+								</button>
+								<button class="btn btn-default" type="button" ng-click='remove("<%- clase %>",<%- clase %>,mat);' >
+									<span class="glyphicon glyphicon glyphicon-remove-sign"></span>
+								</button>
+							</td> 
+						</tr> 
+					</tbody>
+				</table> 
+			</form>
+		</div>
+	</div> 
+</div> 

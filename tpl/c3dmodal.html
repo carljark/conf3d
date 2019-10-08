@@ -1,0 +1,21 @@
+<div class="modal fade">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">{{ title }}</h4>
+			</div>
+			<div class="modal-body">
+				<div ng-repeat="mat in zona | orderBy:'modelo'">
+					<div class="col-md-3 elto">
+						<div class="modelo">
+							<h4 ng-bind="mat.modelo"></h4>
+						</div> 
+						<img id="{{mat.id}}" alt="{{mat.id}}" ng-src='{{carpeta.concat("/",mat.archivo)}}' class="img-responsive" ng-click='elegir(mat.archivo)' />
+					</div> 
+				</div>
+				<div ng-transclude></div>
+			</div>
+		</div>
+	</div>
+</div>

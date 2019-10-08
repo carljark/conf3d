@@ -1,0 +1,16 @@
+<div class="modal-header">
+	<h3 class="modal-title">{{titulo}}</h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-4 elto" ng-repeat="item in items">
+			<h4 ng-bind="camelize(item.modelo)"></h4>
+            <a href="#" ng-click="$event.preventDefault(); selected.item = item; ok();"><img class="img-responsive" ng-src="{{ carpeta+item.archivo }}" alt="{{ item.modelo }}"></a>
+        </div>
+    </div>
+    <!--Selected: <b>{{ selected.item }}</b-->
+</div>
+<!--div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div-->

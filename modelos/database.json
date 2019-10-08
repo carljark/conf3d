@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "driver": "postgres",
+    "user": "user3d",
+    "database": "conf3d",
+	"password": "miscojonesgordos"
+  },
+ 
+  "production": {
+    "driver": "postgres",
+    "user": "user3d",
+    "database": "conf3d"
+  }
+}

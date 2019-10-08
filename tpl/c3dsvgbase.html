@@ -1,0 +1,57 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 1190 850"
+	version="1.1"
+	preserveAspectRatio="xMinYMin meet"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	style="
+		shape-rendering:auto;
+		text-rendering:auto;
+		image-rendering:auto;
+		fill-rule:evenodd;
+		clip-rule:evenodd"
+	>
+	<g id="layer1">
+		<image id="base"
+		xlink:href="{{ambBase}}"
+		width="1190" height="850"
+		preserveAspectRatio="none"
+		/>
+		<image id="escena"
+		xlink:href="{{rutapared}}"
+		preserveAspectRatio="none"
+		width="1190" height="850"
+		/>
+		<image id="pngpav"
+		xlink:href="{{rutasuelo}}"
+		width="1190" height="850"
+		preserveAspectRatio="none"
+		/>
+		<path
+		id="revestimiento"
+		data-ng-click='open("revestimientos");'
+		ng-mouseenter="animarRevest();"
+		ng-mouseleave="animOutRevest();"
+		ng-attr-d="{{pared}}"
+		ng-attr-transform="{{transformpared}}"
+		stroke="orange"
+		stroke-width="7"
+		stroke-dasharray="7"
+		stroke-dashoffset="7"
+		ng-class="{bordepared: isIE, bordeparednoie: !isIE}"
+		/>
+		<path
+		id="pavjark"
+		data-ng-click='open("pavimentos");'
+		data-ng-mouseenter="animar();"
+		data-ng-mouseleave="animOut();"
+		ng-attr-d="{{suelo}}"
+		ng-attr-transform="{{transformsuelo}}"
+		stroke="orange"
+		ng-attr-stroke-dasharray="{{ !isIE && getLargoSuelo(); }}"
+		ng-attr-stroke-dashoffset="{{ !isIE && getLargoSuelo(); }}"
+		stroke-width="7"
+		ng-class="{bordesuelo: isIE, bordesuelonoie: !isIE}"
+		/>
+	</g>
+</svg>
